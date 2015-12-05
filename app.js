@@ -1,10 +1,10 @@
-var app = angular.module("Basketball-Capstone-App", ['firebase', 'ngRoute', 'ui.bootstrap']);
+var app = angular.module("Basketball-Capstone-App", ["firebase", "ngRoute"]);
 
-  app.config(['$routeProvider',
+  app.config(["$routeProvider",
   	function($routeProvider){
   		$routeProvider
-  		.when('/', {
-  			templateUrl:
-  			controller:
+  		.when("/", {
+  			templateUrl: "partials/loginPage.html",
+  			controller: "AuthCtrl as authCtrl"
   		})
   	}]);
