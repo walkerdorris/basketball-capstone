@@ -7,4 +7,5 @@ var app = angular.module("Basketball-Capstone-App", ["firebase", "ngRoute"]);
   			templateUrl: "partials/loginPage.html",
   			controller: "AuthCtrl as authCtrl"
   		})
+  		.otherwise({redirectTo: "/"});
   	}]);

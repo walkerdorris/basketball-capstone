@@ -2,8 +2,8 @@ app.controller("AuthCtrl",
 	['$firebaseAuth',
 	 'Auth',
 	 function($firebaseAuth, Auth) {
-
-
+	 	console.log("Authentication Standing By...");
+	 	this.AuthData = null;
 // **********REGISTRATION**********
 // ********************************
 
@@ -19,6 +19,23 @@ app.controller("AuthCtrl",
 	 		}).catch(function(error){
 	 			console.log("An Error Occured During Registration", error);
 	 		});
+	 	};
+// ***********LOGIN*************
+// *****************************
+	 	console.log("Login Standing By...")
+	 	this.AuthLogin = function(){
+	 		console.log("Logging in...");
+
+	 		Auth.$authWithPassword({
+	 			email:this.emaillogin,
+	 			password: this.passwordlogin
+	 		}).then(function(authData){
+	 			this.AuthData= authData;
+	 			// $location
+	 			console.log ("Authentication Data: ", authData);
+	 		}).bind(this).catch(function(error){
+				console.log("Authentication Failed: ", error);
+			});
 	 	};
 	 }
 	]);
