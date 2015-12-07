@@ -31,7 +31,7 @@ app.controller("AuthCtrl",
 	 			password: this.passwordlogin
 	 		}).then(function(authData){
 	 			this.AuthData= authData;
-	 			// $location
+	 			$location.path("/MainPage");
 	 			console.log ("Authentication Data: ", authData);
 	 		}).bind(this).catch(function(error){
 				console.log("Authentication Failed: ", error);
