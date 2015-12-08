@@ -32,7 +32,7 @@ app.controller("AuthCtrl",
 	 			password: this.passwordlogin
 	 		}).then(function(authData){
 	 			this.AuthData= authData;
-	 			$location.path("/MainPage");
+	 			// $location.path("/MainPage");
 	 			console.log ("Authentication Data: ", authData);
 	 		},function(error){
 	 			console.log(error);
