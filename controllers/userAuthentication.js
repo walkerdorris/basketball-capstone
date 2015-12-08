@@ -1,7 +1,8 @@
 app.controller("AuthCtrl", 
 	['$firebaseAuth',
 	 'Auth',
-	 function($firebaseAuth, Auth) {
+	 '$location',
+	 function($firebaseAuth, Auth, $location) {
 	 	console.log("Authentication Standing By...");
 	 	this.AuthData = null;
 // **********REGISTRATION**********
@@ -33,9 +34,12 @@ app.controller("AuthCtrl",
 	 			this.AuthData= authData;
 	 			$location.path("/MainPage");
 	 			console.log ("Authentication Data: ", authData);
-	 		}).bind(this).catch(function(error){
-				console.log("Authentication Failed: ", error);
-			});
+	 		},function(error){
+	 			console.log(error);
+	 		})
+	 	// 	.bind(this).catch(function(error){
+			// 	console.log("Authentication Failed: ", error);
+			// });
 	 	};
 	 }
 	]);
