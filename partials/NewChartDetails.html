@@ -1,14 +1,18 @@
 <div>
 	<h1>NEW CHART:</h1>
 </div>
-<div>
+
+<form ng-submit="addChart()">
+	<div>
 	<label for="title">Title:</label>
-	<input type="title">
+	<input type="text" ng-model="newChartDetails.title">
 </div>
 <div>
 	<label for="date">Date:</label>
-	<input type="Date">
+	<input type="text" ng-model="newChartDetails.date">
 </div>
 <div>
-	<a href="#/MainPage"><button type="button">SUBMIT</button></a>
+	<button type="submit">SUBMIT</button>
 </div>
+</form>
+
