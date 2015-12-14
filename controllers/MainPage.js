@@ -1,4 +1,4 @@
-app.controller("MainPage", function($scope){
+app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
  console.log("working")
 	$scope.gameboard = 
 	[[null,null,null],
@@ -7,11 +7,28 @@ app.controller("MainPage", function($scope){
 	]
 	$scope.greendot="../images/green_dot.png"
 
- $("#0").on("click", function(){
-	var zero= $("#0").html("X");
-	return $scope.gameboard[0][0] = "X";
 
-});	
+	// ***********************
+ // *********MODAL*********
+ // ***********************
+ 
+
+ $scope.displayShotSelectionModal = function () {
+
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: '/partials/ShotSelection',
+      controller: 'MainPage as main',
+      size: 'sm'
+      
+   });
+ }
+
+ // $("#0").on("click", function(){
+	// var zero= $("#0").html("X");
+	// return $scope.gameboard[0][0] = "X";
+
+// });	
 
 
  $("#1").on("click", function(){
@@ -65,4 +82,46 @@ app.controller("MainPage", function($scope){
 
 
 
-});
+// ****************************
+// ********MAKES W/ MODAL******
+// ****************************
+
+ $scope.make = function() {
+ 	var madeShot = "Make";
+    $("#0").html(madeShot);
+    return $scope.gameboard[0][0] = "Make";
+ };
+
+ // ***************************
+ // ******MISSES W/ MODAL******
+ // ***************************
+ 
+ $scope.miss = function() {
+ 	var missedShot = "Miss";
+ 	$("#0").html(missedShot);
+ 	return $scope.gameboard[0][0] = "Miss";
+ };
+
+ // ***************************
+ // *******DELETE W/MODAL******
+ // ***************************
+ 
+ $scope.deleted = function() {
+ 	var deletedShot = "";
+ 	$("#0").html("");
+ 	return $scope.gameboard[0][0] = "";
+ };
+
+ 
+
+
+
+
+ $scope.cancel = function () {
+    $uibModalInstance.close("closed");
+  };
+
+
+
+
+}]);
