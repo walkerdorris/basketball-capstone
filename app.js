@@ -1,4 +1,4 @@
-var app = angular.module("Basketball-Capstone-App", ["firebase", "ngRoute"]);
+var app = angular.module("Basketball-Capstone-App", ["firebase", "ngRoute", "ui.bootstrap"]);
 
   app.config(["$routeProvider",
   	function($routeProvider){
@@ -19,5 +19,10 @@ var app = angular.module("Basketball-Capstone-App", ["firebase", "ngRoute"]);
   			templateUrl: "partials/MainPage.html",
   			controller: "MainPage as main"
   		})
+      
+      // .when("/ShotSelection", {
+      //   templateUrl: "partials/ShotSelection.html",
+      //   controller: "ModalCtrl as modal"
+      // })
   		.otherwise({redirectTo: "/"});
   	}]);

@@ -1,28 +1,51 @@
 app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
  console.log("working")
+	
+// *******************************
+// ***********GAMEBOARD***********
+// *******************************
+
+
 	$scope.gameboard = 
 	[[null,null,null],
 	 [null,null,null],
 	 [null,null,null]
 	]
+	
+// *****************************
+// *********SHOT IMAGES*********
+// *****************************
+
+
 	$scope.greendot="../images/green_dot.png"
 
 
-	// ***********************
- // *********MODAL*********
- // ***********************
+// ***********************
+// *********MODAL*********
+// ***********************
  
 
- $scope.displayShotSelectionModal = function () {
+ $scope.displayShotSelectionModal = function (id) {
 
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: '/partials/ShotSelection',
-      controller: 'MainPage as main',
-      size: 'sm'
+      controller: 'ModalInstanceCtrl',
+      size: 'sm',
+      resolve: {
+      	cellId: function() {
+      		return id;
+      	} 
+      }
       
    });
  }
+
+
+ // *********************************
+ // ****CLICK FUNCTIONS FOR TABLE****
+ // *********************************
+ 
 
  // $("#0").on("click", function(){
 	// var zero= $("#0").html("X");
@@ -90,6 +113,7 @@ app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
  	var madeShot = "Make";
     $("#0").html(madeShot);
     return $scope.gameboard[0][0] = "Make";
+
  };
 
  // ***************************
@@ -113,12 +137,14 @@ app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
  };
 
  
+// ****************************
+// *********CLOSE MODAL********
+// ****************************
 
 
 
-
- $scope.cancel = function () {
-    $uibModalInstance.close("closed");
+ $scope.cancel = function (result) {
+    $uibModal.close(result);
   };
 
 
