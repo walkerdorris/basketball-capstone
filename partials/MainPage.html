@@ -1,21 +1,26 @@
-<div ng-controller="MainPage as main" id="court">
-	<table>
+<div ng-controller="MainPage as main">
+	<!-- <table>
 		<tr>
-			<td ng-click="displayShotSelectionModal(0)" id="0"></td>
-			<td ng-click="displayShotSelectionModal(1)" id="1"></td>
-			<td ng-click="displayShotSelectionModal(2)" id="2"></td>
+			<td ng-click="displayShotSelectionModal(0)" id="0" ng-class="{make:'make', miss:'miss'}[gameBoard[0]]"></td>
+			<td ng-click="displayShotSelectionModal(1)" id="1" ng-class="{make:'make', miss:'miss'}[gameBoard[1]]"></td>
+			<td ng-click="displayShotSelectionModal(2)" id="2" ng-class="{make:'make', miss:'miss'}[gameBoard[2]]"></td>
 		</tr>
 		<tr>
-			<td ng-click="displayShotSelectionModal(3)" id="3"></td>
-			<td ng-click="displayShotSelectionModal(4)" id="4"></td>
-			<td ng-click="displayShotSelectionModal(5)" id="5"></td>
+			<td ng-click="displayShotSelectionModal(3)" id="3" ng-class="{make:'make', miss:'miss'}[gameBoard[3]]"></td>
+			<td ng-click="displayShotSelectionModal(4)" id="4" ng-class="{make:'make', miss:'miss'}[gameBoard[4]]"></td>
+			<td ng-click="displayShotSelectionModal(5)" id="5" ng-class="{make:'make', miss:'miss'}[gameBoard[5]]"></td>
 		</tr>
 		<tr>
-			<td ng-click="displayShotSelectionModal(6)" id="6"></td>
-			<td ng-click="displayShotSelectionModal(7)" id="7"></td>
-			<td ng-click="displayShotSelectionModal(8)" id="8"></td>
+			<td ng-click="displayShotSelectionModal(6)" id="6" ng-class="{make:'make', miss:'miss'}[gameBoard[6]]"></td>
+			<td ng-click="displayShotSelectionModal(7)" id="7" ng-class="{make:'make', miss:'miss'}[gameBoard[7]]"></td>
+			<td ng-click="displayShotSelectionModal(8)" id="8" ng-class="{make:'make', miss:'miss'}[gameBoard[8]]"></td>
 		</tr>
-	</table>
+	</table> -->
+	<div id="basketballCourt">
+        <div make-table></div>
+    </div>
+	</div>
 </div>
+
 
 
