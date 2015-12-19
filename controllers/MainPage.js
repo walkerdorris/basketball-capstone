@@ -20,26 +20,42 @@ app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
 	$scope.greendot="../images/green_dot.png"
 
 
+
+
 // ***********************
 // *********MODAL*********
 // ***********************
- 
 
- $scope.displayShotSelectionModal = function (id) {
+
+  $scope.animationsEnabled = true;
+
+  $scope.displayShotSelectionModal = function (id) {
 
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
-      templateUrl: '/partials/ShotSelection',
+      templateUrl: '/partials/ShotSelection.html',
       controller: 'ModalInstanceCtrl',
       size: 'sm',
       resolve: {
-      	cellId: function() {
-      		return id;
-      	} 
+        myCellId: function () {
+          return id;
+        }
       }
-      
-   });
- }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+    });
+  };
+
+  $scope.toggleAnimation = function () {
+    $scope.animationsEnabled = !$scope.animationsEnabled;
+  };
+
+
+
+
 
 
  // *********************************
@@ -54,53 +70,53 @@ app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
 // });	
 
 
- $("#1").on("click", function(){
-	var zero= $("#1").html("X");
-	return $scope.gameboard[0][1] = "X";
+//  $("#1").on("click", function(){
+// 	var zero= $("#1").html("X");
+// 	return $scope.gameboard[0][1] = "X";
 
-});	
+// });	
 
- $("#2").on("click", function(){
-	var zero= $("#2").html("X");
-	return $scope.gameboard[0][2] = "X";
+//  $("#2").on("click", function(){
+// 	var zero= $("#2").html("X");
+// 	return $scope.gameboard[0][2] = "X";
 
-});	
+// });	
 
- $("#3").on("click", function(){
-	var zero= $("#3").html("X");
-	return $scope.gameboard[1][0] = "X";
+//  $("#3").on("click", function(){
+// 	var zero= $("#3").html("X");
+// 	return $scope.gameboard[1][0] = "X";
 
-});	
+// });	
 
- $("#4").on("click", function(){
-	var zero= $("#4").html("X");
-	return $scope.gameboard[1][1] = "X";
+//  $("#4").on("click", function(){
+// 	var zero= $("#4").html("X");
+// 	return $scope.gameboard[1][1] = "X";
 
-});	
+// });	
 
- $("#5").on("click", function(){
-	var zero= $("#5").html("X");
-	return $scope.gameboard[1][2] = "X";
+//  $("#5").on("click", function(){
+// 	var zero= $("#5").html("X");
+// 	return $scope.gameboard[1][2] = "X";
 
-});	
+// });	
 
- $("#6").on("click", function(){
-	var zero= $("#6").html("X");
-	return $scope.gameboard[2][0] = "X";
+//  $("#6").on("click", function(){
+// 	var zero= $("#6").html("X");
+// 	return $scope.gameboard[2][0] = "X";
 
-});	
+// });	
 
- $("#7").on("click", function(){
-	var zero= $("#7").html("X");
-	return $scope.gameboard[2][1] = "X";
+//  $("#7").on("click", function(){
+// 	var zero= $("#7").html("X");
+// 	return $scope.gameboard[2][1] = "X";
 
-});	
+// });	
 
- $("#8").on("click", function(){
-	var zero= $("#8").html("X");
-	return $scope.gameboard[2][2] = "X";
+//  $("#8").on("click", function(){
+// 	var zero= $("#8").html("X");
+// 	return $scope.gameboard[2][2] = "X";
 
-});	
+// });	
 
 
 
@@ -143,11 +159,30 @@ app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
 
 
 
- $scope.cancel = function (result) {
-    $uibModal.close(result);
-  };
+ // $scope.cancel = function (result) {
+ //    $uibModal.close(result);
+ //  };
 
 
+
+
+// ***********************
+// ****TABLE LOOP*********
+// ***********************
+var table = document.createElement('table'), tr, td, row, cell;
+for (row = 0; row < 2; row++) {
+	tr = document.createElement("tr");
+	for (cell = 0; cell < 10; cell++) {
+		var cellIndex = row * 10 + cell;
+		td = document.createElement("td");
+		tr.appendChild(td);
+		// td.innerHTML = row * 15 + cell;
+		td.id = cellIndex;
+		td.setAttribute("ng-click", "displayShotSelectionModal ("+ cellIndex + ")");
+	}
+	table.appendChild(tr);
+}
+document.getElementById("court").appendChild(table);
 
 
 }]);
