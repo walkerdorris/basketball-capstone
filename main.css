@@ -4,16 +4,32 @@ table {
 
 td {
 	border: 1px solid black;
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
 	text-align: center;
 }
 
+#placeholder {
+	border: 2px dotted red;
+}
+
+#bodyOfPage {
+	display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
 #basketballCourt {
-	background-image: url("../images/basketballCourt.png");
+	/*border: 2px solid black;*/
+		border: 3px solid black;
+		/*margin-right: 1000px;*/
+
+	background-image: url("../images/basketballCourtInterior.png");
 	background-repeat: no-repeat;
-    background-size: 1000px 600px;
-    /*padding-top: 4px;*/
+    background-size: 940px 500px;
+    /*background-position: center;*/
+    /*padding-top: 100px;*/
+
 	
 }
 

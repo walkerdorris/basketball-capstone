@@ -5,7 +5,7 @@ app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
 
   $scope.gameBoard = [];
 
-  for(var i = 0; i < 39; i++) {
+  for(var i = 0; i < 1174; i++) {
     $scope.gameBoard.push(" ");
   }
 	

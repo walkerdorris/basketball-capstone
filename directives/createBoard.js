@@ -3,12 +3,12 @@ app.directive('makeTable', function() {
    compile: function(element) {
 
    var table = document.createElement('table'), tr, td, row, cell;
-   for (row = 0; row < 22; row++) {
+   for (row = 0; row < 25; row++) {
        tr = document.createElement("tr");
        // entering number in "cell < "" " gives columns
-       for (cell = 0; cell < 45; cell++) {
+       for (cell = 0; cell < 47; cell++) {
         // above and below need to match
-           var cellIndex = row * 45 + cell;
+           var cellIndex = row * 47 + cell;
            td = document.createElement("td");
            tr.appendChild(td);
            td.id = cellIndex;

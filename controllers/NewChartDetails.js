@@ -8,11 +8,18 @@ app.controller("NewChartDetails",
 	console.log("$scope.userAuth", $scope.userAuth);
 
 	$scope.charts = $firebaseArray(ref);
-	var gameboard = 
-	[["","",""],
-	 ["","",""],
-	 ["","",""]
-	]
+	// var gameboard = 
+	// [["","",""],
+	//  ["","",""],
+	//  ["","",""]
+	// ]
+	
+	$scope.gameBoard = [];
+
+  	for(var i = 0; i < 1174; i++) {
+    $scope.gameBoard.push(" ");
+  	}
+
 
 	$scope.newChartDetails = {};
 
@@ -22,7 +29,7 @@ app.controller("NewChartDetails",
 		{
 			title: $scope.newChartDetails.title,
 			date: $scope.newChartDetails.date,
-			gameboard: gameboard
+			gameBoard: $scope.gameBoard
 		})
 		$location.path("/MainPage")
 	};
