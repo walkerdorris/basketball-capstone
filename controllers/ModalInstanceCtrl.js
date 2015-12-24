@@ -8,6 +8,11 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
 
    $scope.make = function() {
       $scope.gameBoard[$scope.cellId] = 'make';
+      console.log($scope.gameBoard[$scope.cellId]);
+      console.log("$scope.gameBoard",$scope.gameBoard);
+      console.log("$scope.cellId",$scope.cellId);
+      console.log("gameBoard:$scope.gameBoard",{gameBoard:$scope.gameBoard});
+
       $modalInstance.close({gameBoard:$scope.gameBoard});
    };
 

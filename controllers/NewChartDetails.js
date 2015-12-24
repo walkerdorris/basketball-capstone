@@ -24,7 +24,7 @@ app.controller("NewChartDetails",
 	$scope.newChartDetails = {};
 
 	$scope.addChart = function(){
-		console.log("hi");
+		console.log("$scope.addChart");
 		$scope.charts.$add(
 		{
 			title: $scope.newChartDetails.title,

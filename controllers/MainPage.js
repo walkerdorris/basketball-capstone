@@ -1,4 +1,20 @@
-app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
+app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", function(Auth, $scope, $firebaseArray, $uibModal){
+
+// *******************************
+// ************FIREBASE***********
+// *******************************
+
+  $scope.userAuth = Auth.$getAuth();
+
+  var ref = new Firebase("https://basketball-capstone.firebaseio.com/"+$scope.userAuth.uid);
+
+  console.log("$scope.userAuth", $scope.userAuth);
+
+  $scope.updatedcharts = $firebaseArray(ref.child('gameBoard'));
+  console.log("$scope.updatedcharts", $scope.updatedcharts);
+
+
+
 // *******************************
 // ***********GAMEBOARD***********
 // *******************************
@@ -30,18 +46,68 @@ app.controller("MainPage", ["$scope","$uibModal", function($scope, $uibModal){
       size: 'sm',
       resolve: {
         myCellId: function () {
+          console.log("MainPage id",id);
           return id;
         }, 
         gameBoard: function(){
+          console.log("MainPage gameboard",$scope.gameBoard);
           return $scope.gameBoard;
         }
       }
     });
   };
 
+  console.log("$scope.displayShotSelectionModal()", $scope.displayShotSelectionModal());
+
   $scope.toggleAnimation = function () {
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
+
+console.log("working sorta");
+
+//*****************************
+//********SAVE TO FB***********
+//*****************************
+
+
+$scope.updatedcharts.$save($scope.gameBoard);
+
+// ************OR****************
+
+
+// $firebase(new Firebase(ref)).$child('Charts').$child('gameBoard').$set($scope.gameBoard);
+
+
+// ********OR*************
+
+
+// $scope.updateChart = function(){
+//   console.log("$scope.updateChart");
+//   $scope.updatedcharts.$save(
+//   {
+//     gameBoard:$scope.gameBoard
+//   })
+// };
+
+// console.log("$scope.gameBoard", $scope.gameBoard);
+
+// $scope.updateChart();
+// console.log("$scope.updateChart()", $scope.updateChart);
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ***********************
