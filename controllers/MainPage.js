@@ -1,17 +1,17 @@
 app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", "$routeParams", function(Auth, $scope, $firebaseArray, $uibModal, $routeParams){
-
+console.log("Beginning of MainPage.js");
 // *******************************
 // ************FIREBASE***********
 // *******************************
 
   $scope.userAuth = Auth.$getAuth();
   $scope.gameId = $routeParams.id;
-  var ref = new Firebase("https://basketball-capstone.firebaseio.com/"+$scope.userAuth.uid);
+  var ref = new Firebase("https://basketball-capstone.firebaseio.com/"+$scope.userAuth.uid+"/Charts/"+$scope.gameId);
 
-  console.log("$scope.userAuth", $scope.userAuth);
+  // console.log("ref", ref);
 
-  $scope.updatedcharts = $firebaseArray(ref.child('gameBoard'));
-  console.log("$scope.updatedcharts", $scope.updatedcharts);
+  // $scope.updatedcharts = $firebaseArray(ref.child('gameBoard'));
+  // console.log("$scope.updatedcharts", $scope.updatedcharts);
 
 
 
@@ -22,7 +22,7 @@ app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", "$rout
   $scope.gameBoard = [];
 
   for(var i = 0; i < 1174; i++) {
-    $scope.gameBoard.push(" ");
+    $scope.gameBoard.push("");
   }
 	
 // *****************************
@@ -46,31 +46,37 @@ app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", "$rout
       size: 'sm',
       resolve: {
         myCellId: function () {
-          console.log("MainPage id",id);
           return id;
         }, 
         gameBoard: function(){
-          console.log("MainPage gameboard",$scope.gameBoard);
           return $scope.gameBoard;
-        }
+        },
+        updateFirebase: function(){
+          return ref;
+        } 
       }
     });
   };
+          
+          
+          
 
-  console.log("$scope.displayShotSelectionModal()", $scope.displayShotSelectionModal());
+  
+
+  // console.log("$scope.displayShotSelectionModal()", $scope.displayShotSelectionModal());
 
   $scope.toggleAnimation = function () {
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
 
-console.log("working sorta");
+
 
 //*****************************
 //********SAVE TO FB***********
 //*****************************
 
 
-$scope.updatedcharts.$save($scope.gameBoard);
+// $scope.updatedcharts.$save($scope.gameBoard);
 
 // ************OR****************
 
@@ -129,5 +135,5 @@ $scope.updatedcharts.$save($scope.gameBoard);
 // }
 // document.getElementById("court").appendChild(table);
 
-
+console.log("End of MainPage.js");
 }]);

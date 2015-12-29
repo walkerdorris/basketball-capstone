@@ -1,6 +1,9 @@
-app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, gameBoard) {
+app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, gameBoard, updateFirebase) {
+  console.log("Beginning of ModalInstance.js");
+
   $scope.cellId = myCellId; 
   $scope.gameBoard = gameBoard;
+  $scope.updateFb = updateFirebase;
 
   // ****************************
   // ********MAKES W/ MODAL******
@@ -8,11 +11,7 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
 
    $scope.make = function() {
       $scope.gameBoard[$scope.cellId] = 'make';
-      console.log($scope.gameBoard[$scope.cellId]);
-      console.log("$scope.gameBoard",$scope.gameBoard);
-      console.log("$scope.cellId",$scope.cellId);
-      console.log("gameBoard:$scope.gameBoard",{gameBoard:$scope.gameBoard});
-
+      $scope.updateFb.update({gameBoard: $scope.gameBoard});
       $modalInstance.close({gameBoard:$scope.gameBoard});
    };
 
@@ -22,6 +21,7 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
    
    $scope.miss = function() {
       $scope.gameBoard[$scope.cellId] = 'miss';
+      $scope.updateFb.update({gameBoard: $scope.gameBoard});
       $modalInstance.close({gameBoard:$scope.gameBoard});
    };
 
@@ -31,6 +31,10 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
    
    $scope.deleted = function() {
       $scope.gameBoard[$scope.cellId] = '';
+      $scope.updateFb.update({gameBoard: $scope.gameBoard});
       $modalInstance.close({gameBoard:$scope.gameBoard});
    };
+
+     console.log("End of ModalInstance.js");
+
 });
