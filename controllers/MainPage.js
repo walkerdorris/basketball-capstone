@@ -1,11 +1,11 @@
-app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", function(Auth, $scope, $firebaseArray, $uibModal){
+app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", "$routeParams", function(Auth, $scope, $firebaseArray, $uibModal, $routeParams){
 
 // *******************************
 // ************FIREBASE***********
 // *******************************
 
   $scope.userAuth = Auth.$getAuth();
-
+  $scope.gameId = $routeParams.id;
   var ref = new Firebase("https://basketball-capstone.firebaseio.com/"+$scope.userAuth.uid);
 
   console.log("$scope.userAuth", $scope.userAuth);

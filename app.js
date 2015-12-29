@@ -15,7 +15,7 @@ var app = angular.module("Basketball-Capstone-App", ["firebase", "ngRoute", "ui.
         templateUrl: "partials/NewChartDetails",
         controller: "NewChartDetails as newChartDetails"
       })
-  		.when("/MainPage", {
+  		.when("/MainPage/:id", {
   			templateUrl: "partials/MainPage.html",
   			controller: "MainPage as main"
   		})

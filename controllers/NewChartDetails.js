@@ -30,7 +30,9 @@ app.controller("NewChartDetails",
 			title: $scope.newChartDetails.title,
 			date: $scope.newChartDetails.date,
 			gameBoard: $scope.gameBoard
-		})
+		}).then(function(ref){
+			$location.path("/MainPage/"+ref.key())
+		});
 		$location.path("/MainPage")
 	};
 
