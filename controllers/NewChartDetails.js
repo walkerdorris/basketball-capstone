@@ -8,11 +8,7 @@ app.controller("NewChartDetails",
 	console.log("$scope.userAuth", $scope.userAuth);
 
 	$scope.charts = $firebaseArray(ref);
-	// var gameboard = 
-	// [["","",""],
-	//  ["","",""],
-	//  ["","",""]
-	// ]
+	
 	
 	$scope.gameBoard = [];
 
