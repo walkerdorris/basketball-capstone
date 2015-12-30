@@ -1,9 +1,29 @@
-<div>
+<!-- <div>
 	<ul>
 		<li ng-repeat="savedchart in savedcharts">{{savedchart.title}}: {{savedchart.date}} </li>
 	</ul>
 </div>
-<br>
+<br> -->
+<!-- <div>
+	<a href="#/NewChartDetails"><button type="button">NEW CHART</button></a>
+</div> -->
+
+<div>
+	<table class="table table-striped table-bordered">
+		<thead>
+			<th>Chart:</th>
+			<th>Date:</th>
+			<th></th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="savedchart in savedcharts">
+				<td>{{savedchart.title}}</td>
+				<td>{{savedchart.date}}</td>
+				<td><button type="button" class="btn btn-primary" ng-click="loadoldchart(savedchart.$id)">LOAD</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 <div>
 	<a href="#/NewChartDetails"><button type="button">NEW CHART</button></a>
 </div>

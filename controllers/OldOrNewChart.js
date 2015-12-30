@@ -1,5 +1,5 @@
-app.controller("OldOrNewChart", ["Auth", "$scope", "$firebaseArray", "$location",
-	function(Auth, $scope, $firebaseArray, $location){
+app.controller("OldOrNewChart", ["Auth", "$scope", "$firebaseArray", "$location", "$routeParams",
+	function(Auth, $scope, $firebaseArray, $location, $routeParams){
 	
 	$scope.userAuth = Auth.$getAuth();
 
@@ -9,5 +9,15 @@ app.controller("OldOrNewChart", ["Auth", "$scope", "$firebaseArray", "$location"
 
 	$scope.savedcharts = $firebaseArray(ref);
 
+
+
+	$scope.loadoldchart = function(id){
+
+		console.log("id", id);
+		$location.path("/MainPage/"+id);
+	};
 	
+
+
+
 }]);

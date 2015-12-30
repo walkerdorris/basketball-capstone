@@ -29,7 +29,7 @@ app.controller("NewChartDetails",
 		}).then(function(ref){
 			$location.path("/MainPage/"+ref.key())
 		});
-		$location.path("/MainPage")
+		// $location.path("/MainPage")
 	};
 
 	}]);

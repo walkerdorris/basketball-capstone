@@ -10,8 +10,9 @@ console.log("Beginning of MainPage.js");
 
   
 
+$scope.gameBoard = $firebaseArray(ref.child("gameBoard"));
 
-
+console.log("$scope.gameBoard", $scope.gameBoard);
 
 	
 // *****************************
