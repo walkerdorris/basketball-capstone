@@ -1,4 +1,4 @@
-app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", "$routeParams", function(Auth, $scope, $firebaseArray, $uibModal, $routeParams){
+app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", "$routeParams", "$firebaseObject", function(Auth, $scope, $firebaseArray, $uibModal, $routeParams, $firebaseObject){
 console.log("Beginning of MainPage.js");
 // *******************************
 // ************FIREBASE***********
@@ -7,14 +7,21 @@ console.log("Beginning of MainPage.js");
   $scope.userAuth = Auth.$getAuth();
   $scope.gameId = $routeParams.id;
   var ref = new Firebase("https://basketball-capstone.firebaseio.com/"+$scope.userAuth.uid+"/Charts/"+$scope.gameId);
+  console.log("ref for gameBoard",ref.child("gameBoard"));
+  
+  $scope.game = $firebaseObject(ref);
+  console.log("$scope.game", $scope.game);
+  $scope.gameBoard=[];
+  $scope.game.$loaded().then(function(){
+    $scope.gameBoard = $scope.game.gameBoard;  
+  });  
+
+
+// $scope.gameBoard = $firebaseArray(ref.child("gameBoard"));
+
+// console.log("$scope.gameBoard", $scope.gameBoard);
 
   
-
-$scope.gameBoard = $firebaseArray(ref.child("gameBoard"));
-
-console.log("$scope.gameBoard", $scope.gameBoard);
-
-	
 // *****************************
 // *********SHOT IMAGES*********
 // *****************************
@@ -42,7 +49,9 @@ console.log("$scope.gameBoard", $scope.gameBoard);
           return $scope.gameBoard;
         },
         updateFirebase: function(){
-          return ref;
+          var gameBoardRef = $firebaseObject(ref);
+          console.log("gameBoardRef", gameBoardRef);
+          return gameBoardRef;
         } 
       }
     });

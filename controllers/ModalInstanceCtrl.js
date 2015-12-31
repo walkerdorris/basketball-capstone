@@ -4,6 +4,7 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
   $scope.cellId = myCellId; 
   $scope.gameBoard = gameBoard;
   $scope.updateFb = updateFirebase;
+  console.log("$scope.updateFb", $scope.updateFb);
 
   // ****************************
   // ********MAKES W/ MODAL******
@@ -11,7 +12,13 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
 
    $scope.make = function() {
       $scope.gameBoard[$scope.cellId] = 'make';
-      $scope.updateFb.update({gameBoard: $scope.gameBoard});
+      console.log("$scope.gameBoard", $scope.gameBoard);
+      $scope.updateFb.$save({gameBoard: $scope.gameBoard}).then(function() {
+        alert('Profile saved!');
+      }).catch(function(error) {
+        alert('Error!');
+      });;
+      console.log("$scope.gameBoard after save attempt", $scope.gameBoard);
       $modalInstance.close({gameBoard:$scope.gameBoard});
    };
 
@@ -30,7 +37,7 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
    // ***************************
    
    $scope.deleted = function() {
-      $scope.gameBoard[$scope.cellId] = '';
+      $scope.gameBoard[$scope.cellId] = " ";
       $scope.updateFb.update({gameBoard: $scope.gameBoard});
       $modalInstance.close({gameBoard:$scope.gameBoard});
    };
