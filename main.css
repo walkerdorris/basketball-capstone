@@ -43,3 +43,125 @@ td {
   background-color: red;
   border-radius: 50%;
 }
+
+/*****************/
+/*******TITLE*****/
+/*****************/
+
+#loginBackground {
+  background: url(images/net.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+    font-family: SFSportsNight;
+    src: url(SFSportsNight.ttf);
+    
+}
+
+/*h1 {
+  font-family: SFSportsNight;
+  font-size: 550%;
+  color: black;
+
+}*/
+
+
+
+h1 {
+	/*text-align: center;*/
+	text-align: center;
+	font-family: SFSportsNight;
+  	font-size: 1000%;
+   	color: white;  /* Fallback: assume this color ON TOP of image */
+   	background: url(../images/basketball_closeup.jpeg) no-repeat;
+   	-webkit-background-clip: text;
+   	-webkit-text-fill-color: transparent;
+}
+
+
+/*#titleHeader {
+	text-align: center;
+	font-family: SFSportsNight;
+	font-size: 150%;
+	border: 2px black solid;
+	padding-bottom: 100px;
+	background-image: url("../images/basketball_closeup.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+  	background-position: 50% 50%;
+}*/
+
+
+/*******************/
+/*****AUTHLOGIN*****/
+/*******************/
+
+h3 {
+	color: white;
+}
+
+#registration {
+/*position: absolute;
+  top: 50%;
+  left:25%;
+  transform: translate(-50%,-50%);
+  border: 1px dashed black;
+  margin-left: 25%;
+  padding: 0 -20px 50px 0;*/
+  border: 2px solid black;
+  border-radius: 25px;
+  text-align: center;
+  margin-top: 120px;
+  padding-bottom: 200px;
+  background-image: url("../images/basketball_blackbackground.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+
+}
+
+#login {
+  /*position: absolute;
+  top: 50%;
+  left:75%;
+  transform: translate(-50%,-50%);
+  border: 1px dashed black;
+  border
+  */
+   border: 2px solid black;
+   border-radius: 25px;
+   text-align: center;
+   margin-top: 120px;
+   padding-bottom: 200px;
+   background-image: url("../images/basketball_blackbackground.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 50% 50%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
