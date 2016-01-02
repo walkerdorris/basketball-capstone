@@ -8,12 +8,25 @@ console.log("Beginning of MainPage.js");
   $scope.gameId = $routeParams.id;
   var ref = new Firebase("https://basketball-capstone.firebaseio.com/"+$scope.userAuth.uid+"/Charts/"+$scope.gameId);
 
+  $scope.makeCounter = 0;
+  $scope.missCounter = 0;
+  $scope.totalShots = 0;
   
 $scope.game = $firebaseObject(ref);
   $scope.gameBoard=[];
   $scope.game.$loaded().then(function(){
-    $scope.gameBoard = $scope.game.gameBoard;  
-  })
+    $scope.gameBoard = $scope.game.gameBoard;
+    for (var i=0; i<$scope.gameBoard.length; i++){
+      if($scope.gameBoard[i]==='miss'){
+        $scope.missCounter++;
+      } else if($scope.gameBoard[i]==='make'){
+          $scope.makeCounter++;
+        }
+        if ($scope.gameBoard[i]==='make' || $scope.gameBoard[i]==='miss'){
+          $scope.totalShots++;
+        }
+    }  
+  });
 
 
 

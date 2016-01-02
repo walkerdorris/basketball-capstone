@@ -3,7 +3,9 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
 
   $scope.cellId = myCellId; 
   $scope.gameBoard = gameBoard;
+  console.log("$scope.gameBoard", $scope.gameBoard);
   $scope.updateFb = updateFirebase;
+
 
   // ****************************
   // ********MAKES W/ MODAL******
@@ -34,6 +36,8 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
       $scope.updateFb.update({gameBoard: $scope.gameBoard});
       $modalInstance.close({gameBoard:$scope.gameBoard});
    };
+
+     
 
      console.log("End of ModalInstance.js");
 
