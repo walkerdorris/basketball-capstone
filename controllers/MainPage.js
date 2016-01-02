@@ -1,4 +1,4 @@
-app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", "$routeParams", function(Auth, $scope, $firebaseArray, $uibModal, $routeParams){
+app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", "$routeParams", "$firebaseObject", function(Auth, $scope, $firebaseArray, $uibModal, $routeParams, $firebaseObject){
 console.log("Beginning of MainPage.js");
 // *******************************
 // ************FIREBASE***********
@@ -9,7 +9,11 @@ console.log("Beginning of MainPage.js");
   var ref = new Firebase("https://basketball-capstone.firebaseio.com/"+$scope.userAuth.uid+"/Charts/"+$scope.gameId);
 
   
-
+$scope.game = $firebaseObject(ref);
+  $scope.gameBoard=[];
+  $scope.game.$loaded().then(function(){
+    $scope.gameBoard = $scope.game.gameBoard;  
+  })
 
 
 
