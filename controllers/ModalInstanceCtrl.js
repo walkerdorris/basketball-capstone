@@ -1,4 +1,4 @@
-app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, gameBoard, updateFirebase) {
+app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, gameBoard, updateFirebase, makeCounter, missCounter, totalShots) {
   console.log("Beginning of ModalInstance.js");
 
   $scope.cellId = myCellId; 
@@ -6,6 +6,10 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
   console.log("$scope.gameBoard", $scope.gameBoard);
   $scope.updateFb = updateFirebase;
 
+  $scope.makeCounter = makeCounter;
+  console.log("modal $scope.makeCounter", $scope.makeCounter);
+  $scope.missCounter = missCounter;
+  $scope.totalShots = totalShots;
 
   // ****************************
   // ********MAKES W/ MODAL******
@@ -13,6 +17,8 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, myCellId, 
 
    $scope.make = function() {
       $scope.gameBoard[$scope.cellId] = 'make';
+      $scope.makeCounter++;
+      console.log("make function in modal", $scope.makeCounter);
       $scope.updateFb.update({gameBoard: $scope.gameBoard});
       $modalInstance.close({gameBoard:$scope.gameBoard});
    };

@@ -59,6 +59,16 @@ $scope.game = $firebaseObject(ref);
         },
         updateFirebase: function(){
           return ref;
+        },
+        makeCounter: function(){
+          console.log("$scope.makeCounter being pushed to modal", $scope.makeCounter);
+          return $scope.makeCounter;
+        },
+        missCounter: function(){
+          return $scope.missCounter;
+        },
+        totalShots: function(){
+          return $scope.totalShots; 
         } 
       }
     });
