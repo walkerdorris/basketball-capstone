@@ -151,6 +151,11 @@ h3 {
 
 /****************NAV BAR*********************/
 
+#oldnewchartnav {
+  margin-bottom: 0;
+}
+
+
 .navbar-brand
 {
     position: absolute;
