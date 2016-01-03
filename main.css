@@ -152,12 +152,14 @@ h3 {
 /****************NAV BAR*********************/
 
 #oldnewchartnav {
+  background-image: url("../images/net.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 0;
 }
 
 
-.navbar-brand
-{
+.navbar-brand {
     position: absolute;
     width: 100%;
     left: 0;
