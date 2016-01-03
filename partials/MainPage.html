@@ -1,26 +1,108 @@
+<!-- PRIMARY NAVBAR -->
 <div ng-controller="MainPage as main">
-	<!-- <table>
-		<tr>
-			<td ng-click="displayShotSelectionModal(0)" id="0" ng-class="{make:'make', miss:'miss'}[gameBoard[0]]"></td>
-			<td ng-click="displayShotSelectionModal(1)" id="1" ng-class="{make:'make', miss:'miss'}[gameBoard[1]]"></td>
-			<td ng-click="displayShotSelectionModal(2)" id="2" ng-class="{make:'make', miss:'miss'}[gameBoard[2]]"></td>
-		</tr>
-		<tr>
-			<td ng-click="displayShotSelectionModal(3)" id="3" ng-class="{make:'make', miss:'miss'}[gameBoard[3]]"></td>
-			<td ng-click="displayShotSelectionModal(4)" id="4" ng-class="{make:'make', miss:'miss'}[gameBoard[4]]"></td>
-			<td ng-click="displayShotSelectionModal(5)" id="5" ng-class="{make:'make', miss:'miss'}[gameBoard[5]]"></td>
-		</tr>
-		<tr>
-			<td ng-click="displayShotSelectionModal(6)" id="6" ng-class="{make:'make', miss:'miss'}[gameBoard[6]]"></td>
-			<td ng-click="displayShotSelectionModal(7)" id="7" ng-class="{make:'make', miss:'miss'}[gameBoard[7]]"></td>
-			<td ng-click="displayShotSelectionModal(8)" id="8" ng-class="{make:'make', miss:'miss'}[gameBoard[8]]"></td>
-		</tr>
-	</table> -->
+<nav class="navbar navbar-default" role="navigation" id="oldnewchartnav">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>    
+  </div>
+  
+  <h1 class="navbar-brand">SWISH</h1>
+  
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-left">
+        <form class="navbar-form navbar-left">
+        <!-- <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div> -->
+        <button type="submit" class="btn btn-warning">Charts</button>
+
+      </form>
+      <!-- <form class="navbar-form navbar-left">
+      	<li>{{game.title}}:{{game.date}}</li>
+
+      </form> -->
+       
+        <!-- <li><a href="#about">Left</a></li> -->
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <!-- <li><a href="#about">Right</a></li>
+      <li><a href="#contact">Right</a></li> -->
+      <form class="navbar-form navbar-left">
+        <!-- <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div> -->
+        <button type="submit" class="btn btn-info">Logout</button>
+      </form>
+    </ul>
+  </div>
+</nav> 
+
+
+
+<!-- SECONDARY NAVBAR -->
+
+<nav class="navbar navbar-default" role="navigation" id="mainpagechartinfo">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>    
+  </div>
+  
+  <h4 class="navbar-brand">{{game.title}}:{{game.date}}</h4>
+  
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-left">
+        <form class="navbar-form navbar-left">
+        <!-- <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div> -->
+        <li>Misses:{{missCounter}}</li>
+
+      </form>
+      <form class="navbar-form navbar-left">
+      	<li>Makes:{{makeCounter}}</li>
+
+      </form>
+      <form class="navbar-form navbar-left">
+      	<li>Total Charts:{{totalShots}}</li>
+
+      </form>
+       
+        <!-- <li><a href="#about">Left</a></li> -->
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <!-- <li><a href="#about">Right</a></li>
+      <li><a href="#contact">Right</a></li> -->
+      <form class="navbar-form navbar-left">
+        <!-- <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div> -->
+        <!-- <button type="submit" class="btn btn-info">Logout</button> -->
+      </form>
+      <form class="navbar-form navbar-left">
+        <!-- <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div> -->
+        <!-- <button type="submit" class="btn btn-info">Logout</button> -->
+      </form>
+    </ul>
+  </div>
+</nav> 
+
+
+
+
+<div>
 	
-	<div id="placeholder">{{game.title}}:{{game.date}}</div>
+	<!-- <div id="placeholder">{{game.title}}:{{game.date}}</div>
 	<div>MAKES:{{makeCounter}}</div>
 	<div>MISSES:{{missCounter}}</div>
-	<div>TOTAL SHOTS:{{totalShots}}</div>
+	<div>TOTAL SHOTS:{{totalShots}}</div> -->
 	<div id= "bodyOfPage">
 		<div id="basketballCourt">
         	<div make-table></div>
@@ -32,5 +114,5 @@
 	<div id="basketballCourt"></div> -->
 </div>
 
-
+</div>
 
