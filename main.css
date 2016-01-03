@@ -1,3 +1,4 @@
+
 table {
 	border-collapse: collapse;
 }
@@ -42,4 +43,176 @@ td {
 .miss{
   background-color: red;
   border-radius: 50%;
+}
+
+/**********************************************************
+**********************************************************
+********************LOGIN PAGE****************************
+*********************************************************
+*********************************************************/
+
+/***************************/
+/*******AUTHLOGIN TITLE*****/
+/***************************/
+
+#loginBackground {
+  background: url(images/net.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+    font-family: SFSportsNight;
+    src: url(SFSportsNight.ttf);
+    
+}
+
+/*h1 {
+  font-family: SFSportsNight;
+  font-size: 550%;
+  color: black;
+}*/
+
+
+
+h1 {
+	/*text-align: center;*/
+	text-align: center;
+	font-family: SFSportsNight;
+  	font-size: 1000%;
+   	color: white;  /* Fallback: assume this color ON TOP of image */
+   	background: url(../images/basketball_closeup.jpeg) no-repeat;
+   	-webkit-background-clip: text;
+   	-webkit-text-fill-color: transparent;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+
+/*******************/
+/*****AUTHLOGIN BODY*****/
+/*******************/
+
+h3 {
+	color: white;
+}
+
+#registration {
+/*position: absolute;
+  top: 50%;
+  left:25%;
+  transform: translate(-50%,-50%);
+  border: 1px dashed black;
+  margin-left: 25%;
+  padding: 0 -20px 50px 0;*/
+  border: 2px solid black;
+  border-radius: 25px;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 200px;
+  background-image: url("../images/basketball_blackbackground.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-bottom: 200px;
+
+}
+
+#login {
+  /*position: absolute;
+  top: 50%;
+  left:75%;
+  transform: translate(-50%,-50%);
+  border: 1px dashed black;
+  border
+  */
+   border: 2px solid black;
+   border-radius: 25px;
+   text-align: center;
+   margin-top: 20px;
+   padding-bottom: 200px;
+   background-image: url("../images/basketball_blackbackground.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 50% 50%;
+   margin-bottom: 200px;
+
+}
+
+
+/*********************************************
+**********************************************
+*****************OldOrNewCharts***************
+**********************************************
+**********************************************/
+
+
+/****************NAV BAR*********************/
+
+#oldnewchartnav {
+  background-image: url("../images/net.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    font-size: 400%;
+}
+
+
+
+
+
+/*********************************************
+**********************************************
+*****************NEWCHARTDETAILS***************
+**********************************************
+**********************************************/
+
+
+#newchartbackground {
+ /* background: url(images/basketball_sketch_background.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+
+  background-image: url("../images/basketball_sketch_background.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   /*background-position: 1% 1%;*/
+   margin: 0;
+}
+
+
+/*******************NAVBAR*******************/
+
+
+/*See oldnewchart css*/
+
+/************************************
+*************************************
+*****************newchartinput******/
+
+#newchartinputbox {
+   border: 2px solid black;
+   border-radius: 25px;
+   text-align: center;
+   margin-top: 20px;
+   padding-bottom: 200px;
+   background-image: url("../images/hardwood.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 50% 50%;
+   margin-top: 100px;
+   margin-bottom: 200px;
 }
