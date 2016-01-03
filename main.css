@@ -1,49 +1,4 @@
 
-table {
-	border-collapse: collapse;
-}
-
-td {
-	border: 1px solid black;
-	width: 20px;
-	height: 20px;
-	text-align: center;
-}
-
-#placeholder {
-	border: 2px dotted red;
-}
-
-#bodyOfPage {
-	display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
-
-#basketballCourt {
-	/*border: 2px solid black;*/
-		border: 3px solid black;
-		/*margin-right: 1000px;*/
-
-	background-image: url("../images/basketballCourtInterior.png");
-	background-repeat: no-repeat;
-    background-size: 940px 500px;
-    /*background-position: center;*/
-    /*padding-top: 100px;*/
-
-	
-}
-
-
-.make{
-  background-color: green;
-  border-radius: 50%;
-}
-
-.miss{
-  background-color: red;
-  border-radius: 50%;
-}
 
 /**********************************************************
 **********************************************************
@@ -225,6 +180,62 @@ h3 {
 ********MAIN PAGE*****************
 **********************************/
 
+/*********SECONDARY NAVBAR********/
+
 #mainpagechartinfo {
 	
+}
+
+/*************MAIN PAGE***********/
+
+#MainPageMasterDiv {
+	margin-left: 175px;
+	margin-top: -10px;
+}
+
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid black;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+#placeholder {
+	border: 2px dotted red;
+}
+
+#bodyOfPage {
+	display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#basketballCourt {
+	/*border: 2px solid black;*/
+		border: 3px solid black;
+		/*margin-right: 1000px;*/
+
+	background-image: url("../images/basketballCourtInterior.png");
+	background-repeat: no-repeat;
+    background-size: 940px 500px;
+    /*background-position: center;*/
+    /*padding-top: 100px;*/
+
+	
+}
+
+
+.make{
+  background-color: green;
+  border-radius: 50%;
+}
+
+.miss{
+  background-color: red;
+  border-radius: 50%;
 }
