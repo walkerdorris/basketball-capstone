@@ -36,7 +36,7 @@
 		  <div class="col-md-4"></div>
 		  <div class="col-md-4" id="newchartinputbox">
 		  	<form ng-submit="addChart()">
-		<h3>New Chart:</h3>
+		<h3 id="newchartboxheader">New Chart:</h3>
 		<div>
 		<!-- <label for="title">Title:</label> -->
 		<input type="text" ng-model="newChartDetails.title" placeholder="Title">
@@ -45,8 +45,9 @@
 		<!-- <label for="date">Date:</label> -->
 		<input type="text" ng-model="newChartDetails.date" placeholder="Date">
 	</div>
+	<br>
 	<div>
-		<button type="submit">SUBMIT</button>
+		<button class="btn btn-danger" type="submit">SUBMIT</button>
 	</div>
 	</form>
 		  </div>
