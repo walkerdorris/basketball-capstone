@@ -25,7 +25,7 @@ app.controller("MainPage", ["Auth","$scope","$firebaseArray","$uibModal", "$rout
   });
 
 // *****************************
-// *********MODAL*********
+// *********MODAL***************
 // *****************************
   $scope.animationsEnabled = true;
   $scope.displayShotSelectionModal = function (id) {
