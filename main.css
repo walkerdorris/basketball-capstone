@@ -279,8 +279,8 @@ table {
 }
 
 td {
-	border: 1px solid black;
-	width: 20px;
+/*	border: 1px solid black;
+*/	width: 20px;
 	height: 20px;
 	text-align: center;
 }
@@ -297,7 +297,7 @@ td {
 		border: 3px solid black;
 		/*margin-right: 1000px;*/
 
-	background-image: url("../images/basketballCourtInterior.png");
+	background-image: url("../images/basketballCourtInteriorWood.jpg");
 	background-repeat: no-repeat;
     background-size: 940px 500px;
     /*background-position: center;*/
