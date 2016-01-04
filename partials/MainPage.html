@@ -1,26 +1,70 @@
+<!-- PRIMARY NAVBAR -->
 <div ng-controller="MainPage as main">
-	<!-- <table>
-		<tr>
-			<td ng-click="displayShotSelectionModal(0)" id="0" ng-class="{make:'make', miss:'miss'}[gameBoard[0]]"></td>
-			<td ng-click="displayShotSelectionModal(1)" id="1" ng-class="{make:'make', miss:'miss'}[gameBoard[1]]"></td>
-			<td ng-click="displayShotSelectionModal(2)" id="2" ng-class="{make:'make', miss:'miss'}[gameBoard[2]]"></td>
-		</tr>
-		<tr>
-			<td ng-click="displayShotSelectionModal(3)" id="3" ng-class="{make:'make', miss:'miss'}[gameBoard[3]]"></td>
-			<td ng-click="displayShotSelectionModal(4)" id="4" ng-class="{make:'make', miss:'miss'}[gameBoard[4]]"></td>
-			<td ng-click="displayShotSelectionModal(5)" id="5" ng-class="{make:'make', miss:'miss'}[gameBoard[5]]"></td>
-		</tr>
-		<tr>
-			<td ng-click="displayShotSelectionModal(6)" id="6" ng-class="{make:'make', miss:'miss'}[gameBoard[6]]"></td>
-			<td ng-click="displayShotSelectionModal(7)" id="7" ng-class="{make:'make', miss:'miss'}[gameBoard[7]]"></td>
-			<td ng-click="displayShotSelectionModal(8)" id="8" ng-class="{make:'make', miss:'miss'}[gameBoard[8]]"></td>
-		</tr>
-	</table> -->
+<nav id="oldnewchartnav" class="navbar navbar-default center" role="navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav">
+      <li class="active"><h4 class="swishinnavbar">SWISH</h4></li>
+      
+    </ul>
+
+    <ul class="nav navbar-nav navbar-left">
+        
+        <form class="navbar-form navbar-left">
+        
+        <a href="#/OldOrNewChart"><button type="submit" class="btn btn-warning">Charts</button></a>
+      </form>
+        
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+    
+    <form class="navbar-form navbar-left">
+        
+        <a href="/#/"><button type="submit" class="btn btn-info" id="logout">Logout</button></a>
+      </form>
+      
+      </ul>
+  </div>
+
+</nav>
+
+
+
+<!-- SECONDARY NAVBAR -->
+
+
+<nav class="navbar navbar-inverse" role="navigation" id="mainpagechartinfo">
+
+  
+  <h4 class="navbar-brand" id="gamereadout">{{game.title}} : {{game.date}}</h4>
+  
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-left">
+        <form class="navbar-form navbar-left">
+        
+        <li><h5 id="makereadout">Shots Made: {{makeCounter}}</h5>
+</li>
+      </form>
+      <form class="navbar-form navbar-left">
+      	<li><h5 id="missreadout">Shots Missed: {{missCounter}}</h5></li>
+
+      </form>
+      <form class="navbar-form navbar-left">
+      	<li><h5 id="totalshotsreadout">Total Shots: {{totalShots}}</h5></li>
+
+      </form>
+       
+       
+    </ul>
+  
+  </div>
+</nav> 
+
+<!-- ***********MAINPAGE*************** -->
+<div id="MainPageBackground">
+<div id="MainPageMasterDiv">
 	
-	<div id="placeholder">{{game.title}}:{{game.date}}</div>
-	<div>MAKES:{{makeCounter}}</div>
-	<div>MISSES:{{missCounter}}</div>
-	<div>TOTAL SHOTS:{{totalShots}}</div>
+	
 	<div id= "bodyOfPage">
 		<div id="basketballCourt">
         	<div make-table></div>
@@ -28,9 +72,11 @@
 	</div>
 	
 	
-	<!-- <div id ="table" make-table></div>
-	<div id="basketballCourt"></div> -->
+
 </div>
 
+</div>
+
+</div>
 
 

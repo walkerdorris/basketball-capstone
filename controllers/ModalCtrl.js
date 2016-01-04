@@ -2,10 +2,10 @@
 
 
 app.controller("ModalCtrl", 
-	["$scope","$uibModal",
-	function($scope, $uibModal){
+  ["$scope","$uibModal",
+  function($scope, $uibModal){
 
-		
+    
 
 $scope.displayShotSelectionModal = function () {
 
@@ -18,7 +18,7 @@ $scope.displayShotSelectionModal = function () {
     });
     }
       
-	}]);
+  }]);
 
 
 
