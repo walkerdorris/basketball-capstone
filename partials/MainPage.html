@@ -10,20 +10,16 @@
     <ul class="nav navbar-nav navbar-left">
         
         <form class="navbar-form navbar-left">
-        <!-- <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div> -->
+        
         <button type="submit" class="btn btn-warning">Charts</button>
       </form>
-        <!-- <li><a href="#about">Left</a></li> -->
+        
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
     
     <form class="navbar-form navbar-left">
-        <!-- <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div> -->
+        
         <button type="submit" class="btn btn-info" id="logout">Logout</button>
       </form>
       
@@ -36,16 +32,55 @@
 
 <!-- SECONDARY NAVBAR -->
 
-<nav class="navbar navbar-default" role="navigation" id="mainpagechartinfo">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>    
+
+<!-- <nav class="navbar navbar-default center" role="navigation">
+  <div>
+    
   </div>
   
-  <h4 class="navbar-brand">{{game.title}}:{{game.date}}</h4>
+    <ul class="nav navbar-nav">
+      
+      
+      <ul class="nav navbar-nav navbar-left">
+        <form class="navbar-form navbar-left">
+        
+        <li>Misses:{{missCounter}}</li>
+
+      </form>
+      <form class="navbar-form navbar-left">
+        <li>Makes:{{makeCounter}}</li>
+
+      </form>
+      <form class="navbar-form navbar-left">
+        <li>Total Charts:{{totalShots}}</li>
+
+      </form>
+       <li id="secondarycenter"><h5 >{{game.title}}:{{game.date}}</h5></li>
+       
+    </ul>
+    </ul>
+    
+    </form>
+  </div>
+
+    
+    <ul class="nav navbar-nav navbar-right">
+      
+      <form class="navbar-form navbar-left">
+        
+      </form>
+      <form class="navbar-form navbar-left">
+        
+      </form>
+    </ul>
+  
+
+</nav> -->
+
+<nav class="navbar navbar-inverse" role="navigation" id="mainpagechartinfo">
+
+  
+  <h4 class="navbar-brand" id="gamereadout">{{game.title}} : {{game.date}}</h4>
   
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-left">
@@ -53,48 +88,69 @@
         <!-- <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div> -->
-        <li>Misses:{{missCounter}}</li>
+        <li><h5 id="makereadout">Shots Made: {{makeCounter}}</h5>
+</li>
+      </form>
+      <form class="navbar-form navbar-left">
+      	<li><h5 id="missreadout">Shots Missed: {{missCounter}}</h5></li>
 
       </form>
       <form class="navbar-form navbar-left">
-      	<li>Makes:{{makeCounter}}</li>
-
-      </form>
-      <form class="navbar-form navbar-left">
-      	<li>Total Charts:{{totalShots}}</li>
+      	<li><h5 id="totalshotsreadout">Total Shots: {{totalShots}}</h5></li>
 
       </form>
        
-        <!-- <li><a href="#about">Left</a></li> -->
+       
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <!-- <li><a href="#about">Right</a></li>
-      <li><a href="#contact">Right</a></li> -->
+    <!-- <ul class="nav navbar-nav navbar-right">
+      
       <form class="navbar-form navbar-left">
-        <!-- <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div> -->
-        <!-- <button type="submit" class="btn btn-info">Logout</button> -->
+        
       </form>
       <form class="navbar-form navbar-left">
-        <!-- <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div> -->
-        <!-- <button type="submit" class="btn btn-info">Logout</button> -->
+        
       </form>
-    </ul>
+    </ul> -->
   </div>
 </nav> 
 
 
 
 
+
+<!-- <nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>    
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav" id="secondaryNav">
+      <li class="navbar-left"><h4>Left 1</h4></li>
+      <li class="navbar-left"><h4>Left 1</h4></li>
+      <li class="navbar-left"><h4>Left 1</h4></li>
+      <li class="navbar-left"><h4>Left 1</h4></li>
+      <li class="navbar-left"><a href="#">Left 2</a></li>
+      <li><h4>{{game.title}}:{{game.date}}<h4></li>
+      
+      <li class="navbar-right"><a href="#">Right 2</a></li>
+      <li class="navbar-right"><a href="#">Right 1</a></li>
+    </ul>
+  </div>
+</nav> -->
+
+
+
+
+
+
+
+
 <div id="MainPageMasterDiv">
 	
-	<!-- <div id="placeholder">{{game.title}}:{{game.date}}</div>
-	<div>MAKES:{{makeCounter}}</div>
-	<div>MISSES:{{missCounter}}</div>
-	<div>TOTAL SHOTS:{{totalShots}}</div> -->
+	
 	<div id= "bodyOfPage">
 		<div id="basketballCourt">
         	<div make-table></div>
