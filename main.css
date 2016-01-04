@@ -1,4 +1,26 @@
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+.navbar.center .navbar-inner .nav {
+    float: none;
+    display:inline-block;
+}
 
+
+#logout {
+  margin-right: 15px;
+}
+
+.swishinnavbar {
+  font-family: SFSportsNight;
+  color: white;  /* Fallback: assume this color ON TOP of image */
+    background: url(../images/basketball_closeup.jpeg) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 300%;
+    margin: 0;
+/*    padding-top: 10px;
+*/}
 
 /**********************************************************
 **********************************************************
