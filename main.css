@@ -6,14 +6,14 @@
     display:inline-block;
 }
 
-.navbar-brand:hover, .navbar-brand:focus {
+/*.navbar-brand:hover, .navbar-brand:focus {
   background-color: transparent;
   color: #999999;
-}
+}*/
 
-.navbar-brand {
+/*.navbar-brand {
   color: black;
-}
+}*/
 
 #logout {
   margin-right: 15px;
