@@ -317,3 +317,39 @@ td {
   background-color: red;
   border-radius: 50%;
 }
+
+
+/*****************
+***SHOT SELECTION*
+******************/
+
+#modalBackground {
+  background-color: black;
+}
+
+.modal-header {
+  /*margin: auto;
+  width: 6
+  0%;
+  border: 1px solid red;*/
+  text-align: center;
+  /*background-color: black;
+*/}
+
+.modal-body {
+  text-align: center;
+  background-color: black;
+}
+
+#modalMakeButton{
+
+}
+
+#modalMissButton{
+
+}
+
+#modalDeleteButton {
+
+}
+
