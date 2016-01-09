@@ -19,10 +19,5 @@ var app = angular.module("Basketball-Capstone-App", ["firebase", "ngRoute", "ui.
   			templateUrl: "partials/MainPage.html",
   			controller: "MainPage as main"
   		})
-      
-      // .when("/ShotSelection", {
-      //   templateUrl: "partials/ShotSelection.html",
-      //   controller: "ModalCtrl as modal"
-      // })
   		.otherwise({redirectTo: "/"});
   	}]);

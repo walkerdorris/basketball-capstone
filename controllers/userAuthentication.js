@@ -37,9 +37,6 @@ app.controller("AuthCtrl",
 	 		},function(error){
 	 			console.log(error);
 	 		})
-	 	// 	.bind(this).catch(function(error){
-			// 	console.log("Authentication Failed: ", error);
-			// });
 	 	};
-	 }
+	  }
 	]);

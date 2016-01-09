@@ -6,14 +6,7 @@
     display:inline-block;
 }
 
-/*.navbar-brand:hover, .navbar-brand:focus {
-  background-color: transparent;
-  color: #999999;
-}*/
 
-/*.navbar-brand {
-  color: black;
-}*/
 
 #logout {
   margin-right: 15px;
@@ -21,15 +14,14 @@
 
 .swishinnavbar {
   font-family: SFSportsNight;
-  color: white;  /* Fallback: assume this color ON TOP of image */
+  color: white;  
     background: url(../images/basketball_closeup.jpeg) no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 300%;
     margin: 0;
     padding-right: 30px;
-/*    padding-top: 10px;
-*/}
+}
 
 #secondarycenter {
   text-align: center;
@@ -46,10 +38,10 @@
   }
 
 /**********************************************************
-**********************************************************
-********************LOGIN PAGE****************************
-*********************************************************
-*********************************************************/
+***********************************************************
+**************************LOGIN PAGE***********************
+***********************************************************
+***********************************************************/
 
 /***************************/
 /*******AUTHLOGIN TITLE*****/
@@ -66,23 +58,13 @@
 @font-face {
     font-family: SFSportsNight;
     src: url(SFSportsNight.ttf);
-    
 }
 
-/*h1 {
-  font-family: SFSportsNight;
-  font-size: 550%;
-  color: black;
-}*/
-
-
-
 h1 {
-  /*text-align: center;*/
   text-align: center;
   font-family: SFSportsNight;
     font-size: 1000%;
-    color: white;  /* Fallback: assume this color ON TOP of image */
+    color: white;  
     background: url(../images/basketball_closeup.jpeg) no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -91,22 +73,15 @@ h1 {
 }
 
 
-/*******************/
+/************************/
 /*****AUTHLOGIN BODY*****/
-/*******************/
+/************************/
 
 h3 {
   color: white;
 }
 
 #registration {
-/*position: absolute;
-  top: 50%;
-  left:25%;
-  transform: translate(-50%,-50%);
-  border: 1px dashed black;
-  margin-left: 25%;
-  padding: 0 -20px 50px 0;*/
   border: 2px solid black;
   border-radius: 25px;
   text-align: center;
@@ -121,13 +96,6 @@ h3 {
 }
 
 #login {
-  /*position: absolute;
-  top: 50%;
-  left:75%;
-  transform: translate(-50%,-50%);
-  border: 1px dashed black;
-  border
-  */
    border: 2px solid black;
    border-radius: 25px;
    text-align: center;
@@ -144,12 +112,13 @@ h3 {
 
 /*********************************************
 **********************************************
-*****************OldOrNewCharts***************
+*****************OLDORNEWCHARTS***************
 **********************************************
 **********************************************/
 
-
-/****************NAV BAR*********************/
+/*******************/
+/******NAV BAR******/
+/*******************/
 
 #oldnewchartnav {
   background-image: url("../images/net.jpeg");
@@ -176,36 +145,29 @@ h3 {
 
 
 
-/*********************************************
-**********************************************
+/**********************************************
+***********************************************
 *****************NEWCHARTDETAILS***************
-**********************************************
-**********************************************/
+***********************************************
+***********************************************/
 
 
 #newchartbackground {
- /* background: url(images/basketball_sketch_background.jpeg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
-
   background-image: url("../images/basketball_sketch_background.jpeg");
    background-repeat: no-repeat;
    background-size: cover;
-   /*background-position: 1% 1%;*/
    margin: 0;
 }
 
-
-/*******************NAVBAR*******************/
-
+/*******************/
+/******NAVBAR*******/
+/*******************/
 
 /*See oldnewchart css*/
 
 /************************************
-*************************************
-*****************newchartinput******/
+**************NEWCHARTINPUT**********
+*************************************/
 
 #newchartboxheader {
   color: black;
@@ -228,10 +190,10 @@ h3 {
 
 
 
-/*********************************
-**********************************
-********MAIN PAGE*****************
-**********************************/
+
+/*************************************
+***************MAIN PAGE**************
+**************************************/
 
 /*********SECONDARY NAVBAR********/
 
@@ -268,10 +230,6 @@ h3 {
   background-image: url("../images/Dark_Court_Background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /*margin-top: -10px;*/
-  /*margin-bottom: 0;
-  margin-top: -5px;*/
-  /*margin-bottom: 50px;;*/
 }
 
 table {
@@ -280,7 +238,7 @@ table {
 
 td {
 /*  border: 1px solid black;
-*/  width: 20px;
+*/width: 20px;
   height: 20px;
   text-align: center;
 }
@@ -288,23 +246,16 @@ td {
 
 #bodyOfPage {
   display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #basketballCourt {
-  /*border: 2px solid black;*/
-    border: 3px solid black;
-    /*margin-right: 1000px;*/
-
+  border: 3px solid black;
   background-image: url("../images/basketballCourtInteriorWood.jpg");
   background-repeat: no-repeat;
-    background-size: 940px 500px;
-    /*background-position: center;*/
-    /*padding-top: 100px;*/
-    margin-bottom: 10px;
-
-  
+  background-size: 940px 500px;
+  margin-bottom: 10px;
 }
 
 
@@ -319,37 +270,21 @@ td {
 }
 
 
-/*****************
-***SHOT SELECTION*
-******************/
+/***********************
+******SHOT SELECTION****
+************************/
 
 #modalBackground {
-  background-color: black;
+  background-color: #F8F8F8;
 }
 
 .modal-header {
-  /*margin: auto;
-  width: 6
-  0%;
-  border: 1px solid red;*/
   text-align: center;
-  /*background-color: black;
-*/}
+}
 
 .modal-body {
   text-align: center;
-  background-color: black;
+  background-color: #F8F8F8;
 }
 
-#modalMakeButton{
-
-}
-
-#modalMissButton{
-
-}
-
-#modalDeleteButton {
-
-}
 
